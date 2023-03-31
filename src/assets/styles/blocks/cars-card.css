@@ -1,0 +1,31 @@
+.cars-card {
+  border: 1px solid var(--green-color);
+  padding: 10px 15px;
+  border-radius: 11px;
+}
+
+.cars-card__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--green-color);
+  margin: 0 0 14px;
+  padding-bottom: 5px;
+  color: var(--green-color);
+  text-align: center;
+}
+
+.cars-card__text {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.cars-card__text:last-child {
+  margin: 0;
+}
+
+.secondary-text {
+  font-weight: 700;
+}

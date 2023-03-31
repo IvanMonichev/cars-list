@@ -1,0 +1,12 @@
+.main {
+  width: 1280px;
+  display: flex;
+  margin: 0 auto 0;
+  overflow-y: hidden;
+  flex-grow: 1;
+}
+
+.main__item {
+  width: 50%;
+}
+
