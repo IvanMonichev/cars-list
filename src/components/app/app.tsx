@@ -1,11 +1,9 @@
-
+import Header from '../header/header';
 
 function App(): JSX.Element {
   return (
     <>
-      <header className="header">
-        <h1 className="header__title">Cars List</h1>
-      </header>
+      <Header />
       <main className="main">
         <section className='main__item cars'>
           <div className="cars__sorting">
