@@ -8,6 +8,11 @@ function App(): JSX.Element {
       </header>
       <main className="main">
         <section className='main__item cars'>
+          <div className="cars__sorting">
+            <h2 className="cars__sorting-name">Сортировать по:</h2>
+            <button className="cars__sorting-btn">Год выпуска</button>
+            <button className="cars__sorting-btn">Стоимость</button>
+          </div>
           <h2 className='visually-hidden'>Список машин</h2>
           <ul className="cars-list">
             <li className="cars-list__item">

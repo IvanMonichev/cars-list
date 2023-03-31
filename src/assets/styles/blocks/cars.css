@@ -1,3 +1,35 @@
 .cars {
   overflow-y: auto;
 }
+
+.cars__sorting {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.cars__sorting-name {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.cars__sorting-btn {
+  height: 10px;
+  padding: 15px 10px;
+  background-color: transparent;
+  border: 2px solid var(--green-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 11px;
+  color: var(--green-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.cars__sorting-btn:hover {
+  background-color: var(--green-color);
+  color: white;
+}
