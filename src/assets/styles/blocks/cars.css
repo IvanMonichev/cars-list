@@ -33,3 +33,8 @@
   background-color: var(--green-color);
   color: white;
 }
+
+.cars__sorting-btn--active {
+  background-color: var(--green-color);
+  color: white;
+}
