@@ -2,6 +2,7 @@
 export type Cars = {
   id: number;
   name: string;
+  year: number;
   model: string;
   color: string;
   price: number;

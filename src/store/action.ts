@@ -12,7 +12,7 @@ export const fetchCars = createAsyncThunk<Cars[], undefined, { extra: Extra }>(
   Action.FETCH_CARS,
   async (_, { extra }) => {
     const { api } = extra;
-    const { data } = await.get<Cars[]>(ApiRoute.Cars);
+    const { data } = await api.get<Cars[]>(ApiRoute.Cars);
 
     return data;
   }
