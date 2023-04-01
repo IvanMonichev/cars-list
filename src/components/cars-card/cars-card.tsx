@@ -20,8 +20,12 @@ function CarsCard({ name, model, latitude, longitude, price, color, year }: Cars
           <span className='secondary-text'>Цена:</span> {price}
         </p>
         <p className="cars-card__text">
-          <span className='secondary-text'>Координаты:</span> {`${latitude} ${longitude}`}
+          <span className='secondary-text'>Координаты:</span> {`${latitude}, ${longitude}`}
         </p>
+        <div className="cars-card__menu">
+          <button className="cars-card__menu-btn btn-edit"></button>
+          <button className="cars-card__menu-btn btn-delete"></button>
+        </div>
       </article>
     </li>
   );

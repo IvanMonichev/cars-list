@@ -9,3 +9,5 @@ export type Cars = {
   latitude: number;
   longitude: number;
 }
+
+export type Location = Pick<Cars, 'latitude' | 'longitude'>;

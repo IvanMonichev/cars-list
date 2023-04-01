@@ -3,12 +3,16 @@ import CarsCard from '../cars-card/cars-card';
 import SortingList from '../sorting-list/sorting-list';
 import { Comparator, SortName } from '../../constants/sorting';
 import { setSorting } from '../../store/action';
+import { Cars } from '../../types/cars';
 
-function CarsList(): JSX.Element {
+type CarsListProps = {
+  cars: Cars[]
+}
+
+function CarsList({ cars }: CarsListProps): JSX.Element {
 
   const dispatch = useAppDispatch();
   const activeSorting = useAppSelector((state) => state.sorting);
-  const cars = useAppSelector((state) => state.cars);
   const sortedCars = useAppSelector((state) => [...cars].sort(Comparator[state.sorting]));
 
   const onSortingChange = (name: SortName): void => {

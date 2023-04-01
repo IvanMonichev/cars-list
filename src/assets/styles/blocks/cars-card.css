@@ -1,7 +1,8 @@
 .cars-card {
-  border: 2px solid var(--green-color);
+  border: 2px solid var(--blue-color);
   padding: 10px 15px;
   border-radius: 11px;
+  position: relative;
 }
 
 .cars-card__name {
@@ -9,10 +10,10 @@
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--green-color);
+  border-bottom: 2px solid var(--blue-color);
   margin: 0 0 14px;
   padding-bottom: 5px;
-  color: var(--green-color);
+  color: var(--blue-color);
   text-align: center;
 }
 
@@ -29,3 +30,40 @@
 .secondary-text {
   font-weight: 700;
 }
+
+.cars-card__menu {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.cars-card__menu--active {
+  display: flex;
+  gap: 3px;
+}
+
+.cars-card__menu-btn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.btn-edit {
+  background-image: url('../../images/edit.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-delete {
+  background-image: url('../../images/trash.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
