@@ -11,9 +11,12 @@ type Extra = {
 export const Action = {
   SET_SORTING: 'sorting/set',
   FETCH_CARS: 'cars/fetch',
+  DELETE_CARS: 'card/delete'
 }
 
 export const setSorting = createAction<SortName>(Action.SET_SORTING);
+
+export const deleteCars = createAction<Number>(Action.DELETE_CARS);
 
 export const fetchCars = createAsyncThunk<Cars[], undefined, { extra: Extra }>(
   Action.FETCH_CARS,

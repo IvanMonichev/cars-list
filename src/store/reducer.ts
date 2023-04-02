@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { Cars } from '../types/cars';
-import { fetchCars, setSorting } from './action';
+import { deleteCars, fetchCars, setSorting } from './action';
 import { SortName } from '../constants/sorting';
 
 type State = {
@@ -23,6 +23,9 @@ export const reducer = createReducer(initialState, (builder) => {
     .addCase(fetchCars.fulfilled, (state, action) => {
       state.cars = action.payload;
       state.isCarsLoading = false;
+    })
+    .addCase(deleteCars, (state, action) => {
+      state.cars = state.cars.filter((car) => car.id !== action.payload);
     })
     .addCase(setSorting, (state, action) => {
       state.sorting = action.payload;
