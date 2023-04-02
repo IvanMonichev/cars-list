@@ -1,7 +1,7 @@
 {
   "name": "cars-list",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://ivanmonichev.github.io/cars-list/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
