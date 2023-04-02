@@ -2,6 +2,7 @@ import Header from '../header/header';
 import CarsList from '../cars-list/cars-list';
 import Map from '../map/map'
 import { useAppSelector } from '../../hooks';
+import PopupEdit from '../popup-edit/popup-edit';
 
 function App(): JSX.Element {
   const cars = useAppSelector((state) => state.cars);
@@ -20,6 +21,7 @@ function App(): JSX.Element {
           />
         </section>
       </main>
+      <PopupEdit cars={cars} />
     </>
   );
 }

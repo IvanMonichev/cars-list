@@ -1,7 +1,7 @@
 import { Cars } from '../../types/cars';
 import { useState } from 'react';
 import { useAppDispatch } from '../../hooks';
-import { deleteCars } from '../../store/action';
+import { deleteCar, openPopup, setIdOpenedCar } from '../../store/action';
 
 type CarsCardProps = Cars;
 
@@ -10,7 +10,7 @@ function CarsCard({ id, name, model, latitude, longitude, price, color, year }: 
   const dispatch = useAppDispatch();
   const [isFocusCard, setIsFocusCard] = useState<boolean>(false);
   const handleDeleteCard = () => {
-    dispatch(deleteCars(id));
+    dispatch(deleteCar(id));
   }
 
   const handleCardMouseMove = () => {
@@ -20,6 +20,10 @@ function CarsCard({ id, name, model, latitude, longitude, price, color, year }: 
     setIsFocusCard(false)
   }
 
+  const handleOpenPopup = () => {
+    dispatch(openPopup(true));
+    dispatch(setIdOpenedCar(id))
+  }
 
   return (
     <li className="cars-list__item" onMouseMove={handleCardMouseMove} onMouseLeave={handleCardMouseLeave}>
@@ -41,7 +45,7 @@ function CarsCard({ id, name, model, latitude, longitude, price, color, year }: 
           <span className='secondary-text'>Координаты:</span> {`${latitude}, ${longitude}`}
         </p>
         <div className={`cars-card__menu ${isFocusCard ? 'cars-card__menu--active' : ''}`}>
-          <button className="cars-card__menu-btn btn-edit"></button>
+          <button className="cars-card__menu-btn btn-edit" onClick={handleOpenPopup}></button>
           <button className="cars-card__menu-btn btn-delete" onClick={handleDeleteCard}></button>
         </div>
       </article>

@@ -10,4 +10,6 @@ export type Cars = {
   longitude: number;
 }
 
+export type UpdateCar = Pick<Cars, 'name' | 'model' | 'price'>;
+
 export type Location = Pick<Cars, 'latitude' | 'longitude'>;
