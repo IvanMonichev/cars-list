@@ -4,6 +4,7 @@ import SortingList from '../sorting-list/sorting-list';
 import { Comparator, SortName } from '../../constants/sorting';
 import { setSorting } from '../../store/action';
 import { Cars } from '../../types/cars';
+import Spinner from '../spinner/spinner';
 
 type CarsListProps = {
   cars: Cars[]
@@ -14,9 +15,14 @@ function CarsList({ cars }: CarsListProps): JSX.Element {
   const dispatch = useAppDispatch();
   const activeSorting = useAppSelector((state) => state.sorting);
   const sortedCars = useAppSelector((state) => [...cars].sort(Comparator[state.sorting]));
+  const isCarsLoading = useAppSelector((state) => state.isCarsLoading);
 
   const onSortingChange = (name: SortName): void => {
     dispatch(setSorting(name))
+  }
+
+  if (isCarsLoading) {
+    return <Spinner />
   }
 
   return (
